@@ -1,5 +1,5 @@
-import org.json.JSONArray;
-import org.json.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import java.net.HttpURLConnection;
@@ -11,11 +11,8 @@ public class Main {
     public static void main(String[] args) {
 
         try {
-            //Public API:
-            //https://www.metaweather.com/api/location/search/?query=<CITY>
-            //https://www.metaweather.com/api/location/<WOEID>/
 
-            URL url = new URL("https://www.metaweather.com/api/location/search/?query=London");
+            URL url = new URL("https://catfact.ninja/fact");
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
@@ -25,7 +22,7 @@ public class Main {
             int responseCode = conn.getResponseCode();
 
             // 200 OK
-            if(responseCode != 200) {
+            if (responseCode != 200) {
                 throw new RuntimeException("HttpResponseCode: " + responseCode);
             } else {
 
@@ -35,23 +32,27 @@ public class Main {
                 while (scanner.hasNext()) {
                     informationString.append(scanner.nextLine());
                 }
-                //Close scanner
+                //Close the scanner
                 scanner.close();
 
                 System.out.println(informationString);
 
+
+                //JSON simple library Setup with Maven is used to convert strings to JSON
                 JSONParser parse = new JSONParser();
                 JSONArray dataObject = (JSONArray) parse.parse(String.valueOf(informationString));
 
                 //Get the first JSON object in the JSON array
                 System.out.println(dataObject.get(0));
 
-                JSONObject countryData = (JSONObject) dataObject.get(0);
+                JSONObject catData = (JSONObject) dataObject.get(0);
 
-                System.out.println("location_type");
+                System.out.println(catData.get("woeid"));
+
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
 }
