@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67a96a5e-af64-480f-bddf-dbf15ed07db8" name="Changes" comment="JSON parse &amp; JSON array">
+    <list default="true" id="67a96a5e-af64-480f-bddf-dbf15ed07db8" name="Changes" comment="Changed external API &amp; Added exceptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +78,19 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1656458205817</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Changed API &amp; Added exceptions">
+      <created>1656458881688</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1656458881688</updated>
+    </task>
+    <task id="LOCAL−00005" summary="Changed external API &amp; Added exceptions">
+      <created>1656458920605</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1656458920605</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -97,7 +108,9 @@
     <MESSAGE value="Add project" />
     <MESSAGE value="Added responsecode 200 &amp; Scanner" />
     <MESSAGE value="JSON parse &amp; JSON array" />
-    <option name="LAST_COMMIT_MESSAGE" value="JSON parse &amp; JSON array" />
+    <MESSAGE value="Changed API &amp; Added exceptions" />
+    <MESSAGE value="Changed external API &amp; Added exceptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed external API &amp; Added exceptions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -105,6 +118,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
